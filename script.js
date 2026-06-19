@@ -1,12 +1,13 @@
 function insert_Row() {
-    let table = document.getElementById("sampleTable");
-	
-	let row = document.createElement("tr")
-for(let i=1;i<3; i++ ) {
-		let rowText = `New Cell${i}`;
-        let td = document.createElement("td");
-        td.textContent = rowText
+	const tbody = document.querySelector("#sampleTable tbody");
+
+    const row = document.createElement("tr");
+
+    for (let i = 1; i <= 2; i++) {
+        const td = document.createElement("td");
+        td.textContent = `New Cell${i}`;
         row.appendChild(td);
-	}
-  table.prepend(row)
+    }
+
+    tbody.prepend(row);
 }
